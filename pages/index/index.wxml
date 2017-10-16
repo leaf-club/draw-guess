@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='topic'>题目： 你随便画</view>
+  <canvas class='main-can' canvas-id='main-canvas' bindtouchstart='startDraw' bindtouchmove='movePen'></canvas>
+  <view class='menu'>
+    <view class='colors' wx:for='{{ colors }}' wx:for-item='color' wx:key='id'>
+      <view>{{ color }}</view>
+    </view>
+  </view>
+</view>
