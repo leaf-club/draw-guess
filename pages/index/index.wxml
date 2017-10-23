@@ -1,10 +1,15 @@
 <!--index.wxml-->
-<view class="container">
-  <view class='topic'>题目： 你随便画</view>
-  <canvas class='main-can' canvas-id='main-canvas' bindtouchstart='startDraw' bindtouchmove='movePen'></canvas>
-  <view class='menu'>
-    <view class='colors' wx:for='{{ colors }}' wx:for-item='color' wx:key='id'>
-      <view>{{ color }}</view>
-    </view>
+<view class='container'>
+  <view class='topic'>题目</view>
+  <canvas class='main-can' style='width: {{ cWidth }}; height:{{ cHeight }}' canvas-id='main-canvas' bindtouchstart='startDraw' bindtouchmove='movePen' disable-scroll='true'></canvas>
+  <view class='colors' bindtap='changeColor'>
+    <view>颜色</view>
+    <view class='brushColor' style='background-color:{{ item.colorVal }}' data-colorVal='{{ item.colorVal }}' wx:for='{{ colors }}' wx:key='{{ item.id }}'></view>
+  </view>
+  <view class='thicknesses' bindtap='changeThickness'>
+    <view>粗细</view>
+    <view class='brushThickness' style='border: {{ item.thicknessVal }}vw solid #ccc' data-thicknessVal='{{ item.thicknessVal }}' wx:for='{{ thicknesses }}' wx:key='{{ item.id }}'></view>
+    <image style='width: 7vw; height: 7vw; margin-left:5vw;' mode='aspectFit' src='{{ images.eraser }}' bindtap='clean'></image>
+    <image style='width: 7vw; height: 7vw; margin-left:5vw;' mode='aspectFit' src='{{ images.dustbin }}' bindtap='clear'></image>
   </view>
 </view>

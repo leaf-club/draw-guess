@@ -14,13 +14,58 @@
   background-color: #ccc;
 }
 .container .main-can {
-  width: 100%;
-  height: 300px;
+  /* width: 94vw; */
+  /* height: 80vw; */
+  margin: 1vw auto;
+  border: 1px dotted #ccc;
 }
 
-.container .menu {
-  width: 100%;
+.container .colors ,.container .thicknesses{
+  width: 100vw;
+  height: 15vw;
+  padding: 0 3vw;
+  box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: center;
   background-color: #ccc;
+}
+.container .brushColor {
+  width: 5vw;
+  height: 5vw;
+  margin: 0 2.5vw;
+  border-radius: 3vw;
+}
+.brushColor-1 {
+  background-color: #ff3333;
+}
+.brushColor-2 {
+  background-color: #339900;
+}
+.brushColor-3 {
+  background-color: #3366cc;
+}
+.brushColor-4 {
+  background-color: #9966cc;
+}
+.brushColor-5 {
+  background-color: #ee66cc;
+}
+.brushColor-6 {
+  background-color: #66eecc;
+}
+.brushColor-7 {
+  background-color: #eeee66;
+}
+.brushColor-8 {
+  background-color: #604020;
+}
+.container .brushThickness {
+  width: 5vw;
+  height: 5vw;
+  box-sizing: border-box;
+  margin: 0 2.5vw;
+  border-radius: 3vw;
+  background-color: black;
+  border-color: #ccc; 
 }
